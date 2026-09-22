@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>File 3 — English Course</title>
 
   <style>
@@ -24,11 +23,6 @@
 
     header h1 {
       margin: 0;
-      font-size: 32px;
-    }
-
-    header p {
-      margin: 8px 0 0;
     }
 
     main {
@@ -47,11 +41,6 @@
 
     h2 {
       color: #4f46e5;
-      margin-top: 0;
-    }
-
-    h3 {
-      margin-top: 25px;
     }
 
     .info {
@@ -67,7 +56,8 @@
       margin-top: 15px;
     }
 
-    .word-card {
+    .word-card,
+    .phrase {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -117,14 +107,7 @@
     }
 
     .phrase {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 13px 15px;
       margin-top: 10px;
-      background: #f8fafc;
-      border-radius: 10px;
-      border: 1px solid #e2e8f0;
     }
 
     .exercise {
@@ -132,10 +115,6 @@
       padding: 18px;
       border-radius: 12px;
       margin-top: 15px;
-    }
-
-    .exercise select {
-      margin: 5px;
     }
 
     .result {
@@ -146,7 +125,6 @@
     .back {
       display: inline-block;
       margin-bottom: 20px;
-      text-decoration: none;
       color: #4f46e5;
       font-weight: bold;
     }
@@ -172,6 +150,7 @@
 
   <!-- 3A -->
   <section>
+
     <h2>3A — What's in your bag?</h2>
 
     <div class="info">
@@ -249,6 +228,7 @@
     </p>
 
     <div class="exercise">
+
       <strong>Choose the correct answer:</strong>
 
       <p>
@@ -281,12 +261,15 @@
       <button onclick="checkA()">Check answers</button>
 
       <div class="result" id="resultA"></div>
+
     </div>
+
   </section>
 
 
   <!-- 3B -->
   <section>
+
     <h2>3B — Is that a hat?</h2>
 
     <div class="info">
@@ -310,7 +293,7 @@
       </label>
 
       <select id="voiceSelect">
-        <option value="">English voice</option>
+        <option value="">Loading voices...</option>
       </select>
 
       <label for="speedSelect">
@@ -516,9 +499,7 @@
 
 <script>
 
-  /* =========================
-     TEXT TO SPEECH
-     ========================= */
+  let voices = [];
 
   const voiceSelect =
     document.getElementById("voiceSelect");
@@ -529,17 +510,39 @@
 
   function loadVoices() {
 
-    const voices =
+    voices =
       window.speechSynthesis.getVoices();
 
     const englishVoices =
-      voices.filter(voice =>
-        voice.lang.toLowerCase().startsWith("en")
-      );
+      voices.filter(function(voice) {
+
+        return voice.lang
+          .toLowerCase()
+          .startsWith("en");
+
+      });
+
 
     voiceSelect.innerHTML = "";
 
-    englishVoices.forEach((voice, index) => {
+
+    if (englishVoices.length === 0) {
+
+      const option =
+        document.createElement("option");
+
+      option.value = "";
+
+      option.textContent =
+        "Default English voice";
+
+      voiceSelect.appendChild(option);
+
+      return;
+    }
+
+
+    englishVoices.forEach(function(voice, index) {
 
       const option =
         document.createElement("option");
@@ -556,45 +559,62 @@
   }
 
 
-  window.speechSynthesis.onvoiceschanged =
-    loadVoices;
-
   loadVoices();
+
+
+  window.speechSynthesis.addEventListener(
+    "voiceschanged",
+    loadVoices
+  );
 
 
   function speak(text) {
 
+    if (!("speechSynthesis" in window)) {
+
+      alert(
+        "Your browser does not support speech synthesis."
+      );
+
+      return;
+
+    }
+
+
     window.speechSynthesis.cancel();
+
 
     const speech =
       new SpeechSynthesisUtterance(text);
 
-    const voices =
-      window.speechSynthesis.getVoices();
 
     const englishVoices =
-      voices.filter(voice =>
-        voice.lang.toLowerCase().startsWith("en")
-      );
+      voices.filter(function(voice) {
+
+        return voice.lang
+          .toLowerCase()
+          .startsWith("en");
+
+      });
 
 
     const selectedIndex =
       voiceSelect.value;
 
 
-    if (englishVoices.length > 0) {
+    if (
+      selectedIndex !== "" &&
+      englishVoices[selectedIndex]
+    ) {
 
-      if (selectedIndex !== "") {
+      speech.voice =
+        englishVoices[selectedIndex];
 
-        speech.voice =
-          englishVoices[selectedIndex];
+    }
+    else if (englishVoices.length > 0) {
 
-      } else {
-
-        speech.voice =
-          englishVoices[0];
-
-      }
+      speech.voice =
+        englishVoices[0];
 
     }
 
@@ -611,10 +631,6 @@
 
   }
 
-
-  /* =========================
-     3A EXERCISE
-     ========================= */
 
   function checkA() {
 
@@ -638,16 +654,11 @@
       score++;
     }
 
-
     document.getElementById("resultA").textContent =
       "Score: " + score + " / 3";
 
   }
 
-
-  /* =========================
-     3B EXERCISE
-     ========================= */
 
   function checkB() {
 
@@ -670,7 +681,6 @@
     ) {
       score++;
     }
-
 
     document.getElementById("resultB").textContent =
       "Score: " + score + " / 3";
