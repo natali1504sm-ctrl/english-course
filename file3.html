@@ -26,7 +26,6 @@
 
     h1 {
       color: #1f4e79;
-      margin-bottom: 5px;
     }
 
     h2 {
@@ -59,17 +58,17 @@
       margin-left: 8px;
     }
 
-    button {
+    .audio-button {
       background: #1f4e79;
       color: white;
       border: none;
       padding: 9px 15px;
       border-radius: 7px;
-      cursor: pointer;
       font-size: 16px;
+      cursor: pointer;
     }
 
-    button:hover {
+    .audio-button:hover {
       background: #163a5c;
     }
 
@@ -91,6 +90,11 @@
       font-size: 18px;
       margin-bottom: 12px;
     }
+
+    .coming-soon {
+      color: #777;
+      font-style: italic;
+    }
   </style>
 </head>
 
@@ -107,8 +111,6 @@
   </p>
 
 
-  <!-- 3A -->
-
   <h2>3A — What's in your bag?</h2>
 
   <div class="card">
@@ -116,52 +118,41 @@
       <span class="word">book</span>
       <span class="translation">— книга</span>
     </div>
-
-    <button onclick="speak('book')">🔊</button>
+    <button class="audio-button" disabled>🔊 Audio soon</button>
   </div>
-
 
   <div class="card">
     <div>
       <span class="word">pen</span>
       <span class="translation">— ручка</span>
     </div>
-
-    <button onclick="speak('pen')">🔊</button>
+    <button class="audio-button" disabled>🔊 Audio soon</button>
   </div>
-
 
   <div class="card">
     <div>
       <span class="word">pencil</span>
       <span class="translation">— карандаш</span>
     </div>
-
-    <button onclick="speak('pencil')">🔊</button>
+    <button class="audio-button" disabled>🔊 Audio soon</button>
   </div>
-
 
   <div class="card">
     <div>
       <span class="word">bag</span>
       <span class="translation">— сумка</span>
     </div>
-
-    <button onclick="speak('bag')">🔊</button>
+    <button class="audio-button" disabled>🔊 Audio soon</button>
   </div>
-
 
   <div class="card">
     <div>
       <span class="word">phone</span>
       <span class="translation">— телефон</span>
     </div>
-
-    <button onclick="speak('phone')">🔊</button>
+    <button class="audio-button" disabled>🔊 Audio soon</button>
   </div>
 
-
-  <!-- 3B -->
 
   <h2>3B — Is that a hat?</h2>
 
@@ -170,134 +161,50 @@
       <span class="word">hat</span>
       <span class="translation">— шляпа</span>
     </div>
-
-    <button onclick="speak('hat')">🔊</button>
+    <button class="audio-button" disabled>🔊 Audio soon</button>
   </div>
-
 
   <div class="card">
     <div>
       <span class="word">T-shirt</span>
       <span class="translation">— футболка</span>
     </div>
-
-    <button onclick="speak('T-shirt')">🔊</button>
+    <button class="audio-button" disabled>🔊 Audio soon</button>
   </div>
-
 
   <div class="card">
     <div>
       <span class="word">postcard</span>
       <span class="translation">— открытка</span>
     </div>
-
-    <button onclick="speak('postcard')">🔊</button>
+    <button class="audio-button" disabled>🔊 Audio soon</button>
   </div>
 
-
-  <!-- Practice -->
 
   <h2>🗣 Practice</h2>
 
-
   <div class="practice">
-
     <div class="practice-text">
       Is that a hat?
     </div>
-
-    <button onclick="speak('Is that a hat?')">
-      🔊 Listen
-    </button>
-
+    <button class="audio-button" disabled>🔊 Audio soon</button>
   </div>
 
-
   <div class="practice">
-
     <div class="practice-text">
       Is this a postcard?
     </div>
-
-    <button onclick="speak('Is this a postcard?')">
-      🔊 Listen
-    </button>
-
+    <button class="audio-button" disabled>🔊 Audio soon</button>
   </div>
 
 
+  <h2>🎧 Audio</h2>
+
+  <p class="coming-soon">
+    High-quality English audio will be added here.
+  </p>
+
 </div>
-
-
-<script>
-
-  let voices = [];
-
-
-  function loadVoices() {
-
-    voices = speechSynthesis.getVoices();
-
-  }
-
-
-  loadVoices();
-
-
-  if (speechSynthesis.onvoiceschanged !== undefined) {
-
-    speechSynthesis.onvoiceschanged = loadVoices;
-
-  }
-
-
-  function speak(text) {
-
-    speechSynthesis.cancel();
-
-
-    const speech =
-      new SpeechSynthesisUtterance(text);
-
-
-    const englishVoice =
-
-      voices.find(
-        voice => voice.lang === "en-GB"
-      )
-
-      ||
-
-      voices.find(
-        voice => voice.lang.startsWith("en-GB")
-      )
-
-      ||
-
-      voices.find(
-        voice => voice.lang.startsWith("en")
-      );
-
-
-    if (englishVoice) {
-
-      speech.voice = englishVoice;
-
-    }
-
-
-    speech.lang = "en-GB";
-
-    speech.rate = 0.8;
-
-    speech.pitch = 1;
-
-
-    speechSynthesis.speak(speech);
-
-  }
-
-</script>
 
 </body>
 </html>
