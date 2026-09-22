@@ -3,951 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>File 3 — English File Beginner</title>
+  <title>File 3</title>
 
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f7fb;
+      margin: 0;
+      padding: 30px;
       color: #222;
     }
 
-    header {
-      background: #1f4e79;
-      color: white;
-      padding: 25px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0 0 8px;
-      font-size: 30px;
-    }
-
-    header p {
-      margin: 0;
-      font-size: 16px;
-    }
-
     .container {
-      max-width: 1000px;
-      margin: 25px auto;
-      padding: 0 15px;
-    }
-
-    .back {
-      display: inline-block;
-      margin-bottom: 20px;
-      text-decoration: none;
-      color: #1f4e79;
-      font-weight: bold;
-    }
-
-    .section {
+      max-width: 900px;
+      margin: auto;
       background: white;
-      border-radius: 14px;
-      padding: 25px;
-      margin-bottom: 25px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      padding: 30px;
+      border-radius: 15px;
     }
 
-    .section h2 {
-      margin-top: 0;
+    h1 {
       color: #1f4e79;
     }
 
-    .section h3 {
-      color: #333;
-      margin-top: 25px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #e8f1fb;
+    h2 {
       color: #1f4e79;
-      padding: 6px 10px;
-      border-radius: 8px;
-      margin: 4px 4px 4px 0;
-      font-size: 14px;
+      margin-top: 30px;
     }
 
-    .vocab-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 12px;
-      margin-top: 15px;
-    }
-
-    .word-card {
-      background: #f8fafc;
-      border: 1px solid #dce5ef;
-      border-radius: 12px;
+    .card {
+      background: #f7f9fc;
       padding: 15px;
-    }
-
-    .word {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-
-    .translation {
-      color: #666;
-      margin-bottom: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
     }
 
     button {
-      border: none;
-      border-radius: 8px;
-      padding: 9px 13px;
-      cursor: pointer;
       background: #1f4e79;
       color: white;
-      font-size: 14px;
-    }
-
-    button:hover {
-      opacity: 0.9;
-    }
-
-    .grammar-box {
-      background: #eef6ff;
-      border-left: 5px solid #1f4e79;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 15px 0;
-    }
-
-    .example {
-      background: #fafafa;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 12px;
-      margin: 8px 0;
-    }
-
-    .exercise {
-      background: #f8fafc;
-      border: 1px solid #dce5ef;
-      padding: 18px;
-      border-radius: 10px;
-      margin-top: 15px;
-    }
-
-    .exercise input {
-      padding: 8px;
-      border: 1px solid #bbb;
-      border-radius: 6px;
-      width: 120px;
-      margin: 5px;
-    }
-
-    .result {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
-    .audio-settings {
-      background: #fff8e6;
-      border: 1px solid #f0d98c;
-      border-radius: 12px;
-      padding: 18px;
-      margin-bottom: 20px;
-    }
-
-    .audio-settings label {
-      display: block;
-      margin-top: 10px;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-
-    select {
-      width: 100%;
-      max-width: 600px;
-      padding: 9px;
+      border: none;
+      padding: 8px 14px;
       border-radius: 7px;
-      border: 1px solid #bbb;
-      background: white;
-    }
-
-    .phrase {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-      background: #f8fafc;
-      border: 1px solid #dce5ef;
-      padding: 14px;
-      border-radius: 10px;
-      margin: 8px 0;
-    }
-
-    .phrase-text {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .small-note {
-      color: #666;
-      font-size: 14px;
-      margin-top: 8px;
-    }
-
-    .progress-box {
-      background: #f0f7ef;
-      border: 1px solid #c8dfc5;
-      border-radius: 12px;
-      padding: 18px;
-    }
-
-    .check-list label {
-      display: block;
-      margin: 10px 0;
-    }
-
-    footer {
-      text-align: center;
-      color: #777;
-      padding: 30px 10px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 24px;
-      }
-
-      .section {
-        padding: 18px;
-      }
-
-      .phrase {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      cursor: pointer;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>File 3</h1>
-  <p>Things I can do — English File Beginner</p>
-</header>
-
 <div class="container">
 
-  <a class="back" href="course.html">← Back to Course</a>
+  <a href="course.html">← Back to Course</a>
 
-  <!-- AUDIO -->
-  <div class="section">
-    <h2>🔊 Audio settings</h2>
+  <h1>File 3</h1>
 
-    <div class="audio-settings">
+  <p>English File Beginner</p>
 
-      <label for="voiceSelect">
-        English voice
-      </label>
+  <h2>3A — What's in your bag?</h2>
 
-      <select id="voiceSelect">
-        <option>Loading English voices...</option>
-      </select>
-
-      <label for="speedSelect">
-        Speaking speed
-      </label>
-
-      <select id="speedSelect">
-        <option value="0.7">Slow</option>
-        <option value="0.85" selected>Normal</option>
-        <option value="1">Fast</option>
-      </select>
-
-      <p class="small-note">
-        The site prefers British English voices (en-GB) when your device provides one.
-      </p>
-
-    </div>
+  <div class="card">
+    <strong>book</strong> — книга
+    <button onclick="speak('book')">🔊</button>
   </div>
 
-
-  <!-- 3A -->
-  <div class="section">
-
-    <h2>3A — What's in your bag?</h2>
-
-    <div>
-      <span class="tag">Grammar: a / an</span>
-      <span class="tag">Vocabulary: small things</span>
-      <span class="tag">Pronunciation: plural endings</span>
-      <span class="tag">Listening & Speaking</span>
-    </div>
-
-    <h3>📚 Vocabulary</h3>
-
-    <div class="vocab-grid">
-
-      <div class="word-card">
-        <div class="word">book</div>
-        <div class="translation">книга</div>
-        <button onclick="speak('book')">🔊</button>
-      </div>
-
-      <div class="word-card">
-        <div class="word">pen</div>
-        <div class="translation">ручка</div>
-        <button onclick="speak('pen')">🔊</button>
-      </div>
-
-      <div class="word-card">
-        <div class="word">pencil</div>
-        <div class="translation">карандаш</div>
-        <button onclick="speak('pencil')">🔊</button>
-      </div>
-
-      <div class="word-card">
-        <div class="word">key</div>
-        <div class="translation">ключ</div>
-        <button onclick="speak('key')">🔊</button>
-      </div>
-
-      <div class="word-card">
-        <div class="word">watch</div>
-        <div class="translation">часы</div>
-        <button onclick="speak('watch')">🔊</button>
-      </div>
-
-      <div class="word-card">
-        <div class="word">phone</div>
-        <div class="translation">телефон</div>
-        <button onclick="speak('phone')">🔊</button>
-      </div>
-
-    </div>
-
-
-    <h3>📖 Grammar — a / an</h3>
-
-    <div class="grammar-box">
-
-      <p>
-        Use <strong>a</strong> before a consonant sound:
-      </p>
-
-      <div class="example">
-        a book<br>
-        a pen<br>
-        a phone
-      </div>
-
-      <p>
-        Use <strong>an</strong> before a vowel sound:
-      </p>
-
-      <div class="example">
-        an apple<br>
-        an orange<br>
-        an umbrella
-      </div>
-
-    </div>
-
-
-    <h3>✏️ Practice</h3>
-
-    <div class="exercise">
-
-      <p>1. ___ book</p>
-      <input id="a1">
-
-      <p>2. ___ apple</p>
-      <input id="a2">
-
-      <p>3. ___ phone</p>
-      <input id="a3">
-
-      <p>4. ___ orange</p>
-      <input id="a4">
-
-      <button onclick="check3A()">Check</button>
-
-      <div id="result3A" class="result"></div>
-
-    </div>
-
-
-    <h3>🔤 Pronunciation — plural endings</h3>
-
-    <div class="example">
-      <strong>/s/</strong> — books, cups
-      <br>
-      <button onclick="speak('books')">🔊 books</button>
-      <button onclick="speak('cups')">🔊 cups</button>
-    </div>
-
-    <div class="example">
-      <strong>/z/</strong> — pens, bags
-      <br>
-      <button onclick="speak('pens')">🔊 pens</button>
-      <button onclick="speak('bags')">🔊 bags</button>
-    </div>
-
-    <div class="example">
-      <strong>/ɪz/</strong> — watches, boxes
-      <br>
-      <button onclick="speak('watches')">🔊 watches</button>
-      <button onclick="speak('boxes')">🔊 boxes</button>
-    </div>
-
+  <div class="card">
+    <strong>pen</strong> — ручка
+    <button onclick="speak('pen')">🔊</button>
   </div>
 
-
-  <!-- 3B -->
-  <div class="section">
-
-    <h2>3B — Is that a hat?</h2>
-
-    <div>
-      <span class="tag">Grammar: this / that / these / those</span>
-      <span class="tag">Vocabulary: souvenirs</span>
-      <span class="tag">Pronunciation: /ð/ and weak /ə/</span>
-      <span class="tag">Listening & Speaking</span>
-    </div>
-
-
-    <h3>🎒 Vocabulary</h3>
-
-    <div class="vocab-grid">
-
-      <div class="word-card">
-        <div class="word">hat</div>
-        <div class="translation">шляпа / головной убор</div>
-        <button onclick="speak('hat')">🔊</button>
-      </div>
-
-      <div class="word-card">
-        <div class="word">T-shirt</div>
-        <div class="translation">футболка</div>
-        <button onclick="speak('T-shirt')">🔊</button>
-      </div>
-
-      <div class="word-card">
-        <div class="word">map</div>
-        <div class="translation">карта</div>
-        <button onclick="speak('map')">🔊</button>
-      </div>
-
-      <div class="word-card">
-        <div class="word">postcard</div>
-        <div class="translation">открытка</div>
-        <button onclick="speak('postcard')">🔊</button>
-      </div>
-
-      <div class="word-card">
-        <div class="word">mug</div>
-        <div class="translation">кружка</div>
-        <button onclick="speak('mug')">🔊</button>
-      </div>
-
-      <div class="word-card">
-        <div class="word">key ring</div>
-        <div class="translation">брелок</div>
-        <button onclick="speak('key ring')">🔊</button>
-      </div>
-
-      <div class="word-card">
-        <div class="word">flag</div>
-        <div class="translation">флаг</div>
-        <button onclick="speak('flag')">🔊</button>
-      </div>
-
-      <div class="word-card">
-        <div class="word">picture</div>
-        <div class="translation">картина / фотография</div>
-        <button onclick="speak('picture')">🔊</button>
-      </div>
-
-    </div>
-
-
-    <h3>📖 Grammar — this / that / these / those</h3>
-
-    <div class="grammar-box">
-
-      <p>
-        <strong>this</strong> — один предмет рядом
-      </p>
-
-      <p>
-        <strong>that</strong> — один предмет далеко
-      </p>
-
-      <p>
-        <strong>these</strong> — несколько предметов рядом
-      </p>
-
-      <p>
-        <strong>those</strong> — несколько предметов далеко
-      </p>
-
-    </div>
-
-
-    <h3>💬 Practice phrases</h3>
-
-    <div class="phrase">
-      <span class="phrase-text">Is that a hat?</span>
-      <button onclick="speak('Is that a hat?')">🔊</button>
-    </div>
-
-    <div class="phrase">
-      <span class="phrase-text">Is this a postcard?</span>
-      <button onclick="speak('Is this a postcard?')">🔊</button>
-    </div>
-
-    <div class="phrase">
-      <span class="phrase-text">What is that?</span>
-      <button onclick="speak('What is that?')">🔊</button>
-    </div>
-
-
-    <h3>✏️ Practice</h3>
-
-    <div class="exercise">
-
-      <p>
-        1. One thing near me:
-        <input id="b1">
-      </p>
-
-      <p>
-        2. One thing far away:
-        <input id="b2">
-      </p>
-
-      <p>
-        3. Several things near me:
-        <input id="b3">
-      </p>
-
-      <p>
-        4. Several things far away:
-        <input id="b4">
-      </p>
-
-      <button onclick="check3B()">Check</button>
-
-      <div id="result3B" class="result"></div>
-
-    </div>
-
-
-    <h3>🗣 Speaking</h3>
-
-    <div class="example">
-
-      <p>
-        Practice the questions aloud:
-      </p>
-
-      <button onclick="speak('Is that a hat?')">
-        🔊 Is that a hat?
-      </button>
-
-      <button onclick="speak('Is this a postcard?')">
-        🔊 Is this a postcard?
-      </button>
-
-      <button onclick="speak('What is that?')">
-        🔊 What is that?
-      </button>
-
-    </div>
-
+  <div class="card">
+    <strong>pencil</strong> — карандаш
+    <button onclick="speak('pencil')">🔊</button>
   </div>
 
+  <h2>3B — Is that a hat?</h2>
 
-  <!-- PRACTICAL ENGLISH -->
-  <div class="section">
-
-    <h2>🗣 Practical English — Episode 2</h2>
-
-    <h3>Useful phrases</h3>
-
-    <div class="phrase">
-      <span class="phrase-text">
-        Can I have an orange juice, please?
-      </span>
-
-      <button onclick="speak('Can I have an orange juice, please?')">
-        🔊
-      </button>
-    </div>
-
-    <div class="phrase">
-      <span class="phrase-text">
-        Please.
-      </span>
-
-      <button onclick="speak('Please.')">
-        🔊
-      </button>
-    </div>
-
-    <div class="phrase">
-      <span class="phrase-text">
-        Thank you.
-      </span>
-
-      <button onclick="speak('Thank you.')">
-        🔊
-      </button>
-    </div>
-
-    <div class="phrase">
-      <span class="phrase-text">
-        Here you are.
-      </span>
-
-      <button onclick="speak('Here you are.')">
-        🔊
-      </button>
-    </div>
-
+  <div class="card">
+    <strong>hat</strong> — шляпа
+    <button onclick="speak('hat')">🔊</button>
   </div>
 
+  <div class="card">
+    <strong>T-shirt</strong> — футболка
+    <button onclick="speak('T-shirt')">🔊</button>
+  </div>
 
-  <!-- PROGRESS -->
-  <div class="section">
+  <div class="card">
+    <strong>postcard</strong> — открытка
+    <button onclick="speak('postcard')">🔊</button>
+  </div>
 
-    <h2>✅ My progress</h2>
+  <h2>🗣 Practice</h2>
 
-    <div class="progress-box">
+  <div class="card">
+    Is that a hat?
+    <button onclick="speak('Is that a hat?')">🔊</button>
+  </div>
 
-      <div class="check-list">
-
-        <label>
-          <input type="checkbox">
-          I learned the new words.
-        </label>
-
-        <label>
-          <input type="checkbox">
-          I practiced a / an.
-        </label>
-
-        <label>
-          <input type="checkbox">
-          I practiced this / that / these / those.
-        </label>
-
-        <label>
-          <input type="checkbox">
-          I listened to the English phrases.
-        </label>
-
-        <label>
-          <input type="checkbox">
-          I repeated the phrases aloud.
-        </label>
-
-      </div>
-
-    </div>
-
+  <div class="card">
+    Is this a postcard?
+    <button onclick="speak('Is this a postcard?')">🔊</button>
   </div>
 
 </div>
 
-
-<footer>
-  English Course • File 3
-</footer>
-
-
 <script>
 
-  /* =========================
-     ENGLISH VOICE SYSTEM
-     ========================= */
+function speak(text) {
 
-  const voiceSelect = document.getElementById("voiceSelect");
-  const speedSelect = document.getElementById("speedSelect");
+  speechSynthesis.cancel();
 
-  let voices = [];
+  const speech = new SpeechSynthesisUtterance(text);
 
+  speech.lang = "en-GB";
+  speech.rate = 0.85;
+  speech.pitch = 1;
 
-  function loadVoices() {
+  speechSynthesis.speak(speech);
 
-    voices = speechSynthesis.getVoices();
-
-    const englishVoices = voices.filter(voice => {
-
-      const language = voice.lang.toLowerCase();
-
-      return language.startsWith("en-");
-
-    });
-
-
-    voiceSelect.innerHTML = "";
-
-
-    if (englishVoices.length === 0) {
-
-      const option = document.createElement("option");
-
-      option.textContent =
-        "No English voice found on this device";
-
-      option.value = "";
-
-      voiceSelect.appendChild(option);
-
-      return;
-    }
-
-
-    /*
-      We prefer British English.
-
-      Priority:
-      1. en-GB
-      2. English voices
-    */
-
-    const sortedVoices = englishVoices.sort((a, b) => {
-
-      const aLang = a.lang.toLowerCase();
-      const bLang = b.lang.toLowerCase();
-
-      const aGB = aLang === "en-gb" ? 0 : 1;
-      const bGB = bLang === "en-gb" ? 0 : 1;
-
-      if (aGB !== bGB) {
-        return aGB - bGB;
-      }
-
-      return a.name.localeCompare(b.name);
-
-    });
-
-
-    sortedVoices.forEach((voice, index) => {
-
-      const option = document.createElement("option");
-
-      option.value = voice.name;
-
-      option.textContent =
-        `${voice.name} — ${voice.lang}`;
-
-      voiceSelect.appendChild(option);
-
-
-      /*
-        Automatically select the first voice.
-        Because the list is sorted, this should
-        normally be a British English voice.
-      */
-
-      if (index === 0) {
-
-        voiceSelect.value = voice.name;
-
-      }
-
-    });
-
-  }
-
-
-  /*
-    Some browsers load voices after the page loads.
-  */
-
-  speechSynthesis.onvoiceschanged = loadVoices;
-
-  loadVoices();
-
-
-  /* =========================
-     SPEAK FUNCTION
-     ========================= */
-
-  function speak(text) {
-
-    /*
-      Stop previous speech.
-    */
-
-    speechSynthesis.cancel();
-
-
-    const speech =
-      new SpeechSynthesisUtterance(text);
-
-
-    /*
-      Find selected English voice.
-    */
-
-    const selectedVoice =
-      voices.find(
-        voice => voice.name === voiceSelect.value
-      );
-
-
-    if (selectedVoice) {
-
-      speech.voice = selectedVoice;
-
-      /*
-        IMPORTANT:
-        Use the actual language of the selected voice.
-        We do NOT force en-US anymore.
-      */
-
-      speech.lang = selectedVoice.lang;
-
-    } else {
-
-      /*
-        Fallback.
-      */
-
-      speech.lang = "en-GB";
-
-    }
-
-
-    /*
-      Speaking speed.
-    */
-
-    speech.rate =
-      Number(speedSelect.value);
-
-
-    /*
-      Normal pitch.
-    */
-
-    speech.pitch = 1;
-
-
-    /*
-      Speak.
-    */
-
-    speechSynthesis.speak(speech);
-
-  }
-
-
-  /* =========================
-     3A EXERCISE
-     ========================= */
-
-  function check3A() {
-
-    const answers = {
-
-      a1: "a",
-      a2: "an",
-      a3: "a",
-      a4: "an"
-
-    };
-
-
-    let score = 0;
-
-
-    Object.keys(answers).forEach(id => {
-
-      const input =
-        document.getElementById(id);
-
-      const userAnswer =
-        input.value.trim().toLowerCase();
-
-
-      if (userAnswer === answers[id]) {
-
-        score++;
-
-        input.style.border =
-          "2px solid green";
-
-      } else {
-
-        input.style.border =
-          "2px solid red";
-
-      }
-
-    });
-
-
-    document.getElementById("result3A").textContent =
-      `Score: ${score} / 4`;
-
-  }
-
-
-  /* =========================
-     3B EXERCISE
-     ========================= */
-
-  function check3B() {
-
-    const answers = {
-
-      b1: "this",
-      b2: "that",
-      b3: "these",
-      b4: "those"
-
-    };
-
-
-    let score = 0;
-
-
-    Object.keys(answers).forEach(id => {
-
-      const input =
-        document.getElementById(id);
-
-      const userAnswer =
-        input.value.trim().toLowerCase();
-
-
-      if (userAnswer === answers[id]) {
-
-        score++;
-
-        input.style.border =
-          "2px solid green";
-
-      } else {
-
-        input.style.border =
-          "2px solid red";
-
-      }
-
-    });
-
-
-    document.getElementById("result3B").textContent =
-      `Score: ${score} / 4`;
-
-  }
+}
 
 </script>
 
