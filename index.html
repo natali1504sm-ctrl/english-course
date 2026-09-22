@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My English Course</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #20242d;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid #e6e8ee;
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .student {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .welcome {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 1px solid #e7e9ef;
+        }
+
+        .welcome h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .welcome p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin: 30px 0 15px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e5e7ec;
+            border-radius: 18px;
+            padding: 22px;
+            min-height: 150px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .card p {
+            color: #70747d;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .lesson {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid #e5e7ec;
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .lesson h3 {
+            font-size: 21px;
+            margin-bottom: 5px;
+        }
+
+        .lesson p {
+            color: #70747d;
+        }
+
+        .progress {
+            width: 180px;
+            height: 10px;
+            background: #e8eaf0;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 60%;
+            height: 100%;
+            background: #5b67f1;
+            border-radius: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #5b67f1;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .homework {
+            background: white;
+            border: 1px solid #e5e7ec;
+            border-radius: 20px;
+            padding: 25px;
+        }
+
+        .homework-item {
+            display: flex;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .homework-item:last-child {
+            border-bottom: none;
+        }
+
+        .check {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #cfd3dc;
+            border-radius: 6px;
+            margin-right: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px;
+            color: #888;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+            header {
+                padding: 15px 18px;
+            }
+
+            .container {
+                padding: 25px 15px;
+            }
+
+            .welcome {
+                padding: 22px;
+            }
+
+            .welcome h1 {
+                font-size: 25px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson-header {
+                display: block;
+            }
+
+            .progress {
+                margin-top: 15px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">📚 My English Course</div>
+    <div class="student">Student: Alex</div>
+</header>
+
+<main class="container">
+
+    <section class="welcome">
+        <h1>Hello, Alex! 👋</h1>
+        <p>Welcome to your English learning space.</p>
+    </section>
+
+    <h2 class="section-title">Continue learning</h2>
+
+    <section class="lesson">
+
+        <div class="lesson-header">
+
+            <div>
+                <h3>Unit 1 — Hello!</h3>
+                <p>Continue your current lesson</p>
+            </div>
+
+            <div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <p style="margin-top: 6px; font-size: 13px;">
+                    60% complete
+                </p>
+            </div>
+
+        </div>
+
+        <button class="button">
+            Continue →
+        </button>
+
+    </section>
+
+
+    <h2 class="section-title">My learning</h2>
+
+    <section class="cards">
+
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>My Course</h3>
+            <p>Open English File Beginner and continue your lessons.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📝</div>
+            <h3>Homework</h3>
+            <p>You have 4 homework tasks waiting for you.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🧠</div>
+            <h3>Vocabulary</h3>
+            <p>Review your English words and learn new vocabulary.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎧</div>
+            <h3>Listening</h3>
+            <p>Practice listening with your course audio exercises.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎬</div>
+            <h3>Videos</h3>
+            <p>Watch your English learning videos.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💬</div>
+            <h3>Dialogues</h3>
+            <p>Practice useful English conversations.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔄</div>
+            <h3>Review</h3>
+            <p>Review words, grammar and dialogues from previous lessons.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📈</div>
+            <h3>My Progress</h3>
+            <p>See your progress through the course.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📓</div>
+            <h3>My Notes</h3>
+            <p>Keep your personal English notes in one place.</p>
+        </div>
+
+    </section>
+
+
+    <h2 class="section-title">Today's homework</h2>
+
+    <section class="homework">
+
+        <div class="homework-item">
+            <div class="check"></div>
+            <div>
+                <strong>Workbook — Unit 1</strong>
+                <p style="color:#777; font-size:13px;">
+                    Exercises 1–4
+                </p>
+            </div>
+        </div>
+
+        <div class="homework-item">
+            <div class="check"></div>
+            <div>
+                <strong>Vocabulary</strong>
+                <p style="color:#777; font-size:13px;">
+                    Learn 15 new words
+                </p>
+            </div>
+        </div>
+
+        <div class="homework-item">
+            <div class="check"></div>
+            <div>
+                <strong>Listening</strong>
+                <p style="color:#777; font-size:13px;">
+                    Listen to the assigned audio
+                </p>
+            </div>
+        </div>
+
+        <div class="homework-item">
+            <div class="check"></div>
+            <div>
+                <strong>Dialogue</strong>
+                <p style="color:#777; font-size:13px;">
+                    Practice the conversation
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    My English Course · English File Beginner
+</footer>
+
+</body>
+</html>
