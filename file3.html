@@ -4,23 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>File 3A — What's in your bag?</title>
+  <title>File 3 — English File Beginner</title>
 
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #f4f7fb;
       margin: 0;
-      padding: 25px;
+      padding: 30px;
       color: #222;
     }
 
     .container {
-      max-width: 850px;
+      max-width: 900px;
       margin: auto;
       background: white;
       padding: 30px;
-      border-radius: 16px;
+      border-radius: 15px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     }
 
@@ -39,58 +39,57 @@
       margin-bottom: 30px;
     }
 
-    .word {
+    .card {
+      background: #f7f9fc;
+      padding: 18px;
+      margin: 12px 0;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: #f7f9fc;
-      padding: 16px;
-      margin: 10px 0;
-      border-radius: 12px;
     }
 
-    .english {
+    .word {
       font-size: 20px;
       font-weight: bold;
-      color: #1f4e79;
     }
 
-    .russian {
-      color: #555;
+    .translation {
+      color: #666;
       margin-left: 8px;
     }
 
-    .sound {
+    button {
       background: #1f4e79;
       color: white;
       border: none;
-      border-radius: 8px;
-      padding: 9px 13px;
-      font-size: 18px;
+      padding: 9px 15px;
+      border-radius: 7px;
       cursor: pointer;
+      font-size: 16px;
     }
 
-    .sound:hover {
+    button:hover {
       background: #163a5c;
     }
 
-    .grammar {
-      background: #eef5fb;
-      padding: 20px;
-      border-radius: 12px;
-      line-height: 1.6;
-    }
-
     .back {
+      display: inline-block;
+      margin-bottom: 20px;
       color: #1f4e79;
       text-decoration: none;
     }
 
-    .note {
-      background: #fff8df;
-      padding: 15px;
+    .practice {
+      background: #eef5fb;
+      padding: 18px;
+      margin: 12px 0;
       border-radius: 10px;
-      margin-top: 25px;
+    }
+
+    .practice-text {
+      font-size: 18px;
+      margin-bottom: 12px;
     }
   </style>
 </head>
@@ -101,178 +100,202 @@
 
   <a class="back" href="course.html">← Back to Course</a>
 
-  <h1>File 3A</h1>
+  <h1>File 3</h1>
 
   <p class="subtitle">
-    <strong>What's in your bag?</strong>
+    English File Beginner
   </p>
 
 
-  <h2>📚 Vocabulary</h2>
+  <!-- 3A -->
 
-  <div class="word">
+  <h2>3A — What's in your bag?</h2>
+
+  <div class="card">
     <div>
-      <span class="english">book</span>
-      <span class="russian">— книга</span>
+      <span class="word">book</span>
+      <span class="translation">— книга</span>
     </div>
-    <button class="sound" onclick="speak('book')">🔊</button>
+
+    <button onclick="speak('book')">🔊</button>
   </div>
 
-  <div class="word">
+
+  <div class="card">
     <div>
-      <span class="english">pen</span>
-      <span class="russian">— ручка</span>
+      <span class="word">pen</span>
+      <span class="translation">— ручка</span>
     </div>
-    <button class="sound" onclick="speak('pen')">🔊</button>
+
+    <button onclick="speak('pen')">🔊</button>
   </div>
 
-  <div class="word">
+
+  <div class="card">
     <div>
-      <span class="english">pencil</span>
-      <span class="russian">— карандаш</span>
+      <span class="word">pencil</span>
+      <span class="translation">— карандаш</span>
     </div>
-    <button class="sound" onclick="speak('pencil')">🔊</button>
+
+    <button onclick="speak('pencil')">🔊</button>
   </div>
 
-  <div class="word">
+
+  <div class="card">
     <div>
-      <span class="english">bag</span>
-      <span class="russian">— сумка</span>
+      <span class="word">bag</span>
+      <span class="translation">— сумка</span>
     </div>
-    <button class="sound" onclick="speak('bag')">🔊</button>
+
+    <button onclick="speak('bag')">🔊</button>
   </div>
 
-  <div class="word">
+
+  <div class="card">
     <div>
-      <span class="english">phone</span>
-      <span class="russian">— телефон</span>
+      <span class="word">phone</span>
+      <span class="translation">— телефон</span>
     </div>
-    <button class="sound" onclick="speak('phone')">🔊</button>
+
+    <button onclick="speak('phone')">🔊</button>
   </div>
 
-  <div class="word">
+
+  <!-- 3B -->
+
+  <h2>3B — Is that a hat?</h2>
+
+  <div class="card">
     <div>
-      <span class="english">key</span>
-      <span class="russian">— ключ</span>
+      <span class="word">hat</span>
+      <span class="translation">— шляпа</span>
     </div>
-    <button class="sound" onclick="speak('key')">🔊</button>
+
+    <button onclick="speak('hat')">🔊</button>
   </div>
 
 
-  <h2>📖 Grammar</h2>
+  <div class="card">
+    <div>
+      <span class="word">T-shirt</span>
+      <span class="translation">— футболка</span>
+    </div>
 
-  <div class="grammar">
-
-    <p>
-      <strong>A / AN</strong>
-    </p>
-
-    <p>
-      We use <strong>a</strong> before a consonant sound:
-    </p>
-
-    <p>
-      a book<br>
-      a pen<br>
-      a bag
-    </p>
-
-    <p>
-      We use <strong>an</strong> before a vowel sound:
-    </p>
-
-    <p>
-      an apple<br>
-      an orange
-    </p>
-
+    <button onclick="speak('T-shirt')">🔊</button>
   </div>
 
+
+  <div class="card">
+    <div>
+      <span class="word">postcard</span>
+      <span class="translation">— открытка</span>
+    </div>
+
+    <button onclick="speak('postcard')">🔊</button>
+  </div>
+
+
+  <!-- Practice -->
 
   <h2>🗣 Practice</h2>
 
-  <div class="word">
-    <div>
-      <span class="english">What's in your bag?</span>
+
+  <div class="practice">
+
+    <div class="practice-text">
+      Is that a hat?
     </div>
 
-    <button class="sound" onclick="speak('What is in your bag?')">
-      🔊
+    <button onclick="speak('Is that a hat?')">
+      🔊 Listen
     </button>
+
   </div>
 
-  <div class="word">
-    <div>
-      <span class="english">It's a book.</span>
+
+  <div class="practice">
+
+    <div class="practice-text">
+      Is this a postcard?
     </div>
 
-    <button class="sound" onclick="speak('It is a book.')">
-      🔊
+    <button onclick="speak('Is this a postcard?')">
+      🔊 Listen
     </button>
+
   </div>
 
-  <div class="word">
-    <div>
-      <span class="english">It's a pen.</span>
-    </div>
-
-    <button class="sound" onclick="speak('It is a pen.')">
-      🔊
-    </button>
-  </div>
-
-
-  <div class="note">
-    💡 Listen to the English word several times and repeat it aloud.
-  </div>
 
 </div>
 
 
 <script>
 
-function getEnglishVoice() {
+  let voices = [];
 
-  const voices = speechSynthesis.getVoices();
 
-  const british = voices.find(function(voice) {
-    return voice.lang &&
-           voice.lang.toLowerCase().startsWith("en-gb");
-  });
+  function loadVoices() {
 
-  if (british) {
-    return british;
+    voices = speechSynthesis.getVoices();
+
   }
 
-  const english = voices.find(function(voice) {
-    return voice.lang &&
-           voice.lang.toLowerCase().startsWith("en");
-  });
 
-  return english || null;
-}
+  loadVoices();
 
 
-function speak(text) {
+  if (speechSynthesis.onvoiceschanged !== undefined) {
 
-  speechSynthesis.cancel();
+    speechSynthesis.onvoiceschanged = loadVoices;
 
-  const speech = new SpeechSynthesisUtterance(text);
+  }
 
-  const voice = getEnglishVoice();
 
-  if (voice) {
-    speech.voice = voice;
-    speech.lang = voice.lang;
-  } else {
+  function speak(text) {
+
+    speechSynthesis.cancel();
+
+
+    const speech =
+      new SpeechSynthesisUtterance(text);
+
+
+    const englishVoice =
+
+      voices.find(
+        voice => voice.lang === "en-GB"
+      )
+
+      ||
+
+      voices.find(
+        voice => voice.lang.startsWith("en-GB")
+      )
+
+      ||
+
+      voices.find(
+        voice => voice.lang.startsWith("en")
+      );
+
+
+    if (englishVoice) {
+
+      speech.voice = englishVoice;
+
+    }
+
+
     speech.lang = "en-GB";
+
+    speech.rate = 0.8;
+
+    speech.pitch = 1;
+
+
+    speechSynthesis.speak(speech);
+
   }
-
-  speech.rate = 0.85;
-  speech.pitch = 1;
-
-  speechSynthesis.speak(speech);
-}
 
 </script>
 
